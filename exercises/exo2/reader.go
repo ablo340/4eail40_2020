@@ -1,6 +1,8 @@
 package main
 
 import (
+	//"fmt"
+	//"bytes"
 	"io"
 	"os"
 	"strings"
@@ -8,6 +10,16 @@ import (
 
 type spaceEraser struct {
 	r io.Reader
+}
+
+func (s spaceEraser) Read(b []byte) (int, error){
+	d := strings.ReplaceAll(string(b), " ", "")
+
+	m := []byte(d)
+	n, err := s.r.Read(m)
+	n = copy(b, m)
+
+	return n, err
 }
 
 func main() {
