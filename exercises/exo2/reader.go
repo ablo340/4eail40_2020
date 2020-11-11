@@ -13,11 +13,13 @@ type spaceEraser struct {
 }
 
 func (s spaceEraser) Read(b []byte) (int, error){
-	d := strings.ReplaceAll(string(b), " ", "")
+	n, err := s.r.Read(b)
 
-	m := []byte(d)
-	n, err := s.r.Read(m)
-	n = copy(b, m)
+	slice := make ([]byte, n)
+	copy(slice, b[0:n])
+	d := strings.ReplaceAll(string(slice), " ", "")
+
+	n = copy(b, []byte(d))
 
 	return n, err
 }
