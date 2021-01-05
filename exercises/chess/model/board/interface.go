@@ -4,8 +4,8 @@ package board
 import (
 	"fmt"
 
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/coord"
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/piece"
+	"github.com/ablo340/4eail40_2020/exercises/chess/model/coord"
+	"github.com/ablo340/4eail40_2020/exercises/chess/model/piece"
 )
 
 // Board is an interface to a chess board.

@@ -1,8 +1,8 @@
 package board
 
 import (
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/coord"
-	"github.com/jglouis/4eail40_2020/exercises/chess/model/piece"
+	"github.com/ablo340/4eail40_2020/exercises/chess/model/coord"
+	"github.com/ablo340/4eail40_2020/exercises/chess/model/piece"
 )
 
 // Classic 8x8 Chess board
